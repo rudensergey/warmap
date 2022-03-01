@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === ENV.DEV;
 
 const config: Configuration = {
   target: "web",
-  mode: isDev ? ENV.DEV : ENV.PROD,
+  mode: ENV.DEV,
   entry: {
     app: path.resolve(ENTRY_PATH.APP_TS),
   },
@@ -41,16 +41,6 @@ const config: Configuration = {
       template: path.resolve(ENTRY_PATH.APP_HTML),
     }),
   ],
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
-  },
 };
 
 module.exports = config;

@@ -20,10 +20,13 @@ const map = new Map({
   }),
 });
 
+centerMap(32.5947657, 49.4441132);
+
 function centerMap(long: number, lat: number) {
-  console.log("Long: " + long + " Lat: " + lat);
   map.getView().setCenter(transform([long, lat], "EPSG:4326", "EPSG:3857"));
   map.getView().setZoom(6);
 }
 
-centerMap(32.5947657, 49.4441132);
+map.on("click", function (event: any) {
+  console.log(event.coordinate);
+});

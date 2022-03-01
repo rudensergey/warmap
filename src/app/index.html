@@ -13,5 +13,20 @@
   <body>
     <div class="menu"><h1 class="title">Warmap: Ukraine</h1></div>
     <div id="map" class="map"></div>
+    <form>
+      <p>Заполните поля ниже:</p>
+      <select name="Тип события">
+        <option value="murder">Смерть близких/друзей/знакомых</option>
+        <option value="murder_uknown">Смерть незнакомого человека</option>
+        <option value="civilians_district">Обстрелы жилых районов</option>
+        <option value="civilians">Обстрелы гражданских</option>
+        <option value="other">Другое</option>
+      </select>
+      <input placeholder="Ваше ФИО" />
+      <input placeholder="Почта для связи" />
+      <textarea
+        placeholder="Детальное описание происходящего (опционально)"
+      ></textarea>
+    </form>
   </body>
 </html>
