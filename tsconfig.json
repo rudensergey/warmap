@@ -1,11 +1,34 @@
 {
   "compilerOptions": {
     "outDir": "./build",
-    "noImplicitAny": true,
-    "module": "commonjs",
     "target": "es5",
-    "jsx": "react",
-    "allowJs": true
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "rootDirs": ["./src"],
+    "paths": {
+      "@shared/*": ["./src/components/_shared/*"],
+      "@templates/*": ["./src/components/_templates/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@public/*": ["./public/*"],
+      "@database/*": ["src/server/db/*"],
+      "@middlewares/*": ["src/server/middlewares/*"],
+      "@handlers/*": ["src/server/handlers/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

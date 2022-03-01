@@ -1,0 +1,78 @@
+.button {
+  flex-basis: max-content;
+  white-space: nowrap;
+  padding: 0 15px;
+  min-height: 40px;
+  background-color: var(--main);
+  border: 0;
+  margin: 0 10px;
+  box-shadow: 0px 1px 2px var(--light-shadow);
+
+  color: white;
+  font-size: 18px;
+  border-radius: 2px;
+  font-weight: thin;
+
+  transition: all;
+  transition-duration: 0.1s;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--main-hover);
+}
+
+.button:active {
+  background-color: var(--main-active);
+  box-shadow: 0px 0px 0px var(--mid-shadow);
+  transform: scale(0.99);
+}
+
+.button--error {
+  background-color: var(--error);
+}
+
+.button--error:hover {
+  background-color: var(--error-hover);
+}
+
+.button--error:active {
+  background-color: var(--error-error);
+}
+
+.button--warning {
+  background-color: var(--warning);
+}
+
+.button--warning:hover {
+  background-color: var(--warning-hover);
+}
+
+.button--warning:active {
+  background-color: var(--warning-active);
+}
+
+.button--green {
+  background-color: var(--agree);
+}
+
+.button--green:hover {
+  background-color: var(--agree-hover);
+}
+
+.button--green:active {
+  background-color: var(--agree-active);
+}
+
+.button--disabled {
+  background-color: var(--light-shadow);
+}
+
+.button--disabled:hover {
+  background-color: var(--light-shadow);
+}
+
+.button--disabled:active {
+  background-color: var(--light-shadow);
+}
