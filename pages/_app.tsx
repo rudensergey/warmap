@@ -2,6 +2,7 @@ import React from "react";
 
 // global
 import "../src/app.css";
+import "ol/ol.css";
 
 // templates
 import "@templates/Main/Main.styles.css";

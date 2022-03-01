@@ -1,4 +1,4 @@
-.sort {
+.map__wrapper {
   position: sticky;
   width: 100vw;
   min-width: 800px;
@@ -17,7 +17,7 @@
   animation-duration: 0.2s;
 }
 
-.sort__title {
+.map__title {
   display: flex;
   justify-self: start;
   align-items: center;
@@ -29,12 +29,18 @@
   color: var(--dark-shadow);
 }
 
-.sort__dropdown {
+.map__dropdown {
   padding: 0 15px;
   max-width: 200px;
   flex-basis: 100px;
   flex-grow: 1;
   margin: 0 20px;
+}
+
+.map {
+  flex-basis: 600;
+  flex-grow: 1;
+  width: 100%;
 }
 
 @keyframes section-appearing {

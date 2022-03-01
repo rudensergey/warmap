@@ -1,23 +1,12 @@
-export enum SUPPORTED_ALGORITMS {
-  BUBBLE = "bubble",
-  SELECTION = "selection",
-  INSERTION = "insertion",
-  QUICK = "quick",
-  MERGE = "merge",
-  HEAP = "heap",
-}
+import { Map } from "ol";
 
 export type TMapState = Readonly<{
-  coordinates: string;
+  map: null;
+  coordinates: null;
 }>;
 
-export enum SORT {
-  SORT = "sort",
-  TITLE = "sort__title",
-  BOX = "sort__box",
-}
-
-export enum STATUS {
-  SORTING = "Sorting...",
-  CHOSE_ALGORITHM = "Choose your algorithm",
+export enum MAP {
+  WRAPPER = "map__wrapper",
+  TITLE = "map__title",
+  BOX = "map__box",
 }
