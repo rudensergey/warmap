@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Стрельба по жилым кварталам", "id": 1 },
+      "geometry": { "type": "Point", "coordinates": [34.771728515625, 50.94458443495011] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Убийство гражданского", "id": 2 },
+      "geometry": { "type": "Point", "coordinates": [30.498046875, 50.43651601698633] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Применение крылатых ракет", "id": 3 },
+      "geometry": { "type": "Point", "coordinates": [36.2109375, 50.00067775723633] }
+    }
+  ]
+}

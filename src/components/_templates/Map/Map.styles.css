@@ -43,6 +43,11 @@
   width: 100%;
 }
 
+.map__place {
+  position: absolute;
+  z-index: 1;
+}
+
 @keyframes section-appearing {
   0% {
     opacity: 0;
