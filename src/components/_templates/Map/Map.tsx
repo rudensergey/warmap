@@ -19,6 +19,7 @@ import { BUTTON_TYPE } from "@shared/Button/Button.types";
 // Utils
 import { NotificationContext } from "@shared/Notification/Notification";
 import { NOTIFICATION_TYPES, TShowNotification } from "@shared/Notification/Notification.types";
+import { getMarkerLayer } from "@utils/common";
 
 let map: Map = null;
 
@@ -71,21 +72,8 @@ class MapTemplate extends React.Component<{ showNotification: TShowNotification 
 
     this.props.showNotification("Координаты обновлены");
 
-    const marker = new Feature({
-      geometry: new Point(event.coordinate),
-      type: "accident-point",
-      name: "target-point",
-    });
-
-    const vectorLayer = new LayerVector({
-      source: new SourceVector({
-        features: [marker],
-      }),
-    });
-
-    map.addLayer(vectorLayer);
-
-    this.setState({ markerLayer: vectorLayer });
+    this.setState({ markerLayer: getMarkerLayer(event.coordinate) });
+    map.addLayer(this.state.markerLayer);
   }
 
   render() {
